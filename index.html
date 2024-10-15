@@ -14,6 +14,7 @@
             justify-content: center;
             align-items: center;
             background-color: #f4f4f9;
+            flex-direction: column;
         }
 
         /* 容器样式 */
@@ -40,13 +41,20 @@
             color: #555;
             margin-top: 10px;
         }
+
+        /* 版权样式 */
+        .copyright {
+            font-size: 14px;
+            color: #777;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
     <div class="center">
         <div>
+            <h2>请访问某个项目页面，而不是主页。</h2><br>
             <p>
-                请访问某个项目页面，而不是主页。<br>
                 本项目并非钓鱼网站，而是旨在帮助更多人访问 GitHub 的公益项目。<br>
                 请勿输入任何账号信息或敏感数据，谨防滥用。
             </p>
@@ -57,5 +65,15 @@
             </p>
         </div>
     </div>
+
+    <!-- 版权信息 -->
+    <div class="copyright" id="copyright">
+        © <span id="domain"></span>. All rights reserved.
+    </div>
+
+    <script>
+        // 获取当前域名并更新版权信息
+        document.getElementById("domain").textContent = window.location.hostname;
+    </script>
 </body>
 </html>

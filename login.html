@@ -57,5 +57,14 @@
             </p>
         </div>
     </div>
+        <!-- 版权信息 -->
+    <div class="copyright" id="copyright">
+        © <span id="domain"></span>. All rights reserved.
+    </div>
+
+    <script>
+        // 获取当前域名并更新版权信息
+        document.getElementById("domain").textContent = window.location.hostname;
+    </script>
 </body>
 </html>
